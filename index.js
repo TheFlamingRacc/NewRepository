@@ -1,10 +1,8 @@
-const expenses = [
-  { category: 'food', amount: 50 },
-  { category: 'transport', amount: 30 },
-  { category: 'entertainment', amount: 20 }
-];
+let obj = { name: "John", age: 30, country: "USA" };
 
-const allAmount = expenses.reduce((acc, x) => {
-  return acc + x.amount
-}, 0);
-console.log(allAmount);
+let reversedObject = Object.entries(obj).reduce((acc, [key, value]) => {
+    acc[value] = key;
+    return acc;
+}, {});
+
+console.log(reversedObject);
