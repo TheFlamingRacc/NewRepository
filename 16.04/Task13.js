@@ -1,11 +1,14 @@
 let arr = ["apple", "banana", "apple", "orange", "banana", "apple"];
 
 let counter = arr.reduce((acc, x) => {
-  if (acc[x]) {
-    acc[x]++;
+  const newAcc = { ...acc };
+
+  if (newAcc[x]) {
+    newAcc[x]++;
   } else {
-    acc[x] = 1;
+    newAcc[x] = 1;
   }
-  return acc;
+
+  return newAcc;
 }, {});
 console.log(counter);

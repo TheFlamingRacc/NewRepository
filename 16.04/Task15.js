@@ -1,10 +1,8 @@
-let arr = [{ name: "John" }, { age: 30 }, { country: "USA" }];
+let obj1 = { name: "John" };
+let obj2 = { age: 30 };
+let obj3 = { country: "USA" };
 
-let oneObject = arr.reduce((acc, obj) => {
-  for (let key in obj) {
-    acc[key] = obj[key];
-  }
-  return acc;
-}, {});
+let mergedObject = { ...obj1, ...obj2, ...obj3 };
 
-console.log(oneObject);
+console.log(mergedObject);
+
