@@ -1,8 +1,8 @@
 function factorial(a) {
-    let result = 1;
-    for (let i = 1; i <= a; i++) {
-        result *= i;
-    }
-    alert(result);
+  let result = 1;
+  for (let i = 1; i <= a; i++) {
+    result *= i;
+  }
+  return result;
 }
-factorial(4);
+alert(factorial(4));
