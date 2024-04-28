@@ -1,30 +1,11 @@
-function createCounter() {
-  const elements = {};
-
-  function addElement(element) {
-    if (elements[element]) {
-      elements[element]++;
-    } else {
-      elements[element] = 1;
-    }
+function fibonacciSum(n) {
+  if (n <= 1) {
+    return n;
   }
 
-  function getElements() {
-    return elements;
-  }
-
-  return {
-    addElement,
-    getElements,
-  };
+  return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-const counter = createCounter();
+let n = parseInt(prompt("Введіть число"));
 
-counter.addElement("apple");
-counter.addElement("banana");
-counter.addElement("apple");
-counter.addElement("orange");
-
-const elements = counter.getElements();
-console.log(elements);
+console.log(fibonacciSum(n));
