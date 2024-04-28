@@ -8,5 +8,5 @@ function isPalindrome(str) {
   }
 }
 
-console.log(isPalindrome("radar")); 
-console.log(isPalindrome("hello")); 
+console.log(isPalindrome("radar"));
+console.log(isPalindrome("hello"));
