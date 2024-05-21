@@ -12,4 +12,4 @@ let formattedDates = dates.map((obj) => {
   };
 });
 
-console.log(formattedDates);
+console.log("Масив об'єктів з датами у новому форматі:", formattedDates);
