@@ -21,14 +21,14 @@ const euroConverter = new CurrencyConverter(44);
 
 console.log(euroConverter.getInfo());
 
-console.log(euroConverter.convert(300, "euro"));
+console.log(euroConverter.convert(300));
 
 const dollarConverter = new CurrencyConverter(38);
 
-console.log(dollarConverter.convert(300, "dollar"));
+console.log(dollarConverter.convert(300));
 
 dollarConverter.updateExchangeRate(5);
 
 console.log(dollarConverter.getInfo());
 
-console.log(dollarConverter.convert(200, "dollar"));
+console.log(dollarConverter.convert(200));
