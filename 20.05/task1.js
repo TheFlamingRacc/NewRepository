@@ -54,39 +54,3 @@ function Car(mark, id) {
     }
   };
 }
-
-const bmwSaloon = new AutoSaloon(3, "BMW");
-
-console.log(bmwSaloon.getInfo());
-
-const bmwCar = new Car("BMW", "AA3133KC");
-
-console.log(bmwCar.getInfo());
-
-bmwSaloon.addCar(bmwCar);
-
-console.log(bmwCar.getInfo());
-console.log(bmwSaloon.getInfo());
-
-//bmwSaloon.deleteCar("AA3133KC");
-
-//console.log(bmwCar.getInfo());
-//console.log(bmwSaloon.getInfo());
-
-const audiCar = new Car('AUDI', "AB3747DC");
-
-bmwSaloon.addCar(audiCar);
-
-console.log(bmwSaloon.getInfo());
-
-const mersedesCar = new Car('MERSEDES', 'VC4756GH')
-
-bmwSaloon.addCar(mersedesCar);
-
-console.log(bmwSaloon.getInfo())
-
-const bentleyCar = new Car('BENTLEY', 'JD5876KG')
-
-bmwSaloon.addCar(bentleyCar);
-
-console.log(bmwSaloon.getInfo())
