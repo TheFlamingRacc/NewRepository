@@ -1,15 +1,15 @@
-function CurrencyConverter(num) {
+function CurrencyConverter(num, currencyName) {
   this.exchangeRate = num;
 
-  this.convert = function (amountInHryvnia) {
-    const amountInTargetCurrency = amountInHryvnia / this.exchangeRate;
-    return `${amountInHryvnia} UAH is equal to ${amountInTargetCurrency.toFixed(
+  this.convert = function (amountInUah) {
+    const amountInTargetCurrency = amountInUah / this.exchangeRate;
+    return `${amountInUah} UAH is equal to ${amountInTargetCurrency.toFixed(
       2
-    )} of your currency`;
+    )} in ${currencyName}`;
   };
 
   this.getInfo = function () {
-    return `Exchange Rate ${this.exchangeRate}`;
+    return `Exchange Rate ${this.exchangeRate} for ${currencyName}`;
   };
 
   this.updateExchangeRate = function (newRate) {
@@ -17,18 +17,18 @@ function CurrencyConverter(num) {
   };
 }
 
-const euroConverter = new CurrencyConverter(44);
+const uahToEuroConverter = new CurrencyConverter(44, "EURO");
 
-console.log(euroConverter.getInfo());
+console.log(uahToEuroConverter.getInfo());
 
-console.log(euroConverter.convert(300));
+console.log(uahToEuroConverter.convert(300));
 
-const dollarConverter = new CurrencyConverter(38);
+const uahToUsdConverter = new CurrencyConverter(38, "USD");
 
-console.log(dollarConverter.convert(300));
+console.log(uahToUsdConverter.convert(300));
 
-dollarConverter.updateExchangeRate(5);
+uahToUsdConverter.updateExchangeRate(5);
 
-console.log(dollarConverter.getInfo());
+console.log(uahToUsdConverter.getInfo());
 
-console.log(dollarConverter.convert(200));
+console.log(uahToUsdConverter.convert(200));
